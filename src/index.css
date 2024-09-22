@@ -1,0 +1,35 @@
+.div-1 {
+  height:100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  flex-direction: column;
+/* background-color: blue; */
+}
+.inner {
+  width:70vw;
+  height:auto;
+}
+/* Set background color for the entire body */
+body {
+  background-color: #e9ecef; /* Light grey color for the body background */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Set a font for the application */
+  color: #333; /* Default text color */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Optional: Style the container to be centered */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Set a max width for the container */
+  padding: 20px; /* Add padding inside the container */
+  background-color: #ffffff; /* Background color for container */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  margin: 20px; /* Margin around the container */
+}
