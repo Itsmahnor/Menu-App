@@ -4,6 +4,7 @@ import { Header } from './Components/header';
 import Container from './Components/Container';
 import Error from './Error';
 import Para from './Components/para'
+import { UseContextData } from './store/context';
 
 function App() {
   const [content, setContent] = useState([]);
@@ -17,12 +18,11 @@ function App() {
   };
 
   return (
+    <UseContextData.Provider value={content}>
     <Container>
       <div className="container mt-4">
         <Header />
         <hr />
-      
-      
           <div className="input-group mb-3">
             <span className="input-group-text" id="inputGroup-sizing-default">Enter Food Item</span>
             <input
@@ -33,16 +33,18 @@ function App() {
               onKeyDown={addContent}
             />
           </div>
-          {content.length === 0 && <Error arr={content} />}
+          {content.length === 0 && <Error />}
         <ul className="list-group">
           {content.map((item, index) => (
             <li key={index} className="list-group-item">
-              <Para Listitem={item} Change={false} />
+              <Para
+              Change={false} />
             </li>
           ))}
         </ul>
       </div>
     </Container>
+    </UseContextData.Provider>
   );
 }
 

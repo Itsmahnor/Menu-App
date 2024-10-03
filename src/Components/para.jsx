@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import styles from './para.module.css';
+import { useContext,createContext } from 'react';
+import { UseContextData } from '../store/context';
 
-export default function Para({ Listitem, Change }) {
+export default function Para({ Change }) {
+  const  Listitem=useContext(UseContextData);
   const [selected, setSelected] = useState(Change);
 
   const Selection = () => {
